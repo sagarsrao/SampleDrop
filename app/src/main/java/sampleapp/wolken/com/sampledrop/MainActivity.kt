@@ -1,6 +1,7 @@
 package sampleapp.wolken.com.sampledrop
 
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.NonNull
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    /*Enable the pope window*/
     fun popupWindowDogs(): PopupWindow {
 
         // initialize a pop up window type
@@ -76,6 +78,8 @@ class MainActivity : AppCompatActivity() {
         popupWindow.isFocusable = true
         popupWindow.width = 400
         popupWindow.height = WindowManager.LayoutParams.WRAP_CONTENT
+        popupWindow.setBackgroundDrawable(ColorDrawable(Color.GREEN))
+
 
         // set the list view as pop up window content
         popupWindow.contentView = listViewDogs
